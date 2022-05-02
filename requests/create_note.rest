@@ -1,0 +1,19 @@
+
+POST http://localhost:3001/api/notes 
+
+{
+    "content": "Esto es el contenido ",
+    "date": "2019-06-18T19:53:52.615Z",
+    "important": true
+   
+}
+
+###
+
+POST http://localhost:3001/api/notes
+Content-Type: application/json
+{
+    "content": "Otro contenido ",
+    "date": "2019-06-18T19:53:52.615Z",
+    "important": true
+}
