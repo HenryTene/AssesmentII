@@ -1,12 +1,17 @@
 //import endpoints (api)
-const note = require("./api/note");
+
+const favsList = require("./api/favs");
+const user = require("./api/user");
+const isAuthenticated = require("./middlewares/auth");
 
 //define routes
 function routes(app) {
-  app.use("/api/notes", note);
+
+  app.use("/api/favs", isAuthenticated, favsList);
+
+  app.use("/auth/local", user);   
+
   
-//app.use("/api/users", user);
 }
 
 module.exports = routes;
- 

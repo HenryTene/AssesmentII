@@ -1,10 +1,8 @@
-/* const http = require("http"); */
 const express = require("express");
-const mongoose = require("mongoose");
+
 const expressConfig = require("./config/express");
 const connectDB = require("./config/database");
 const routes = require("./routes");
-
 
 const app = express();
 
@@ -16,8 +14,6 @@ app.listen(PORT, () => {
   connectDB();
   //Routes
   routes(app);
-
-  console.log(`Server running on port ${PORT}`);
 });
 
 module.exports = app;
